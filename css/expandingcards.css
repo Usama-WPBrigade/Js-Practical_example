@@ -1,0 +1,107 @@
+
+.card-wrapper{
+    display: flex;
+    overflow: hidden;
+    padding: 80px 0;
+}
+.panel{
+    height: 400px;
+    position: relative;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 5px;
+    transition: 0.7s all;
+}
+.panel .heading{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0;
+    transition: 0.7s all 0.3s;
+}
+.panel.active{
+    flex: auto;
+}
+.panel.active .heading{
+    display: block;
+    opacity: 1;
+}
+.overlay{
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.732);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    padding: 40px;
+}
+.panel.active:hover .overlay{
+    opacity: 1;
+}
+.panel.active:hover .heading{
+    display: none;
+}
+.overlay-heading{
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.overlay .para-wrapper{
+    max-width: 90%;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.overlay .overlay-btn{
+    padding: 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    transition: 0.5s;
+}
+.overlay .overlay-btn:hover{
+    background-color: #020248;
+    border-color: #020248;
+}
+
+@media screen and (max-width:690px  ) {
+    .card-wrapper{
+        flex-direction: column;
+    }
+    .panel{
+        height: 80px;
+        padding: 5px 30px;
+        transition: 0.7s all;
+    }
+    .panel.active {
+        height: 300px;
+        transition: 0.7s all;
+    }
+    .panel .heading{
+        opacity: 1;
+        text-align: left;
+    }
+    .panel .heading{
+        left: 30px;
+        bottom: 20px;
+    }
+}

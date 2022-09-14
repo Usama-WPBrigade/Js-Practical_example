@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Expanding Cards</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+</head>
+<body>
+    
+ 
+   <!------------ Progress Bar Section ----------->
+   <section class="progress-main-section-wrapper">
+        <div class="header">
+            <h1 class="heading" id="heading">Step Form With PRogress Bar</h1>
+            <h1 class="text"></h1>
+        </div>
+        <div class="progress-main-container">
+         <div class="container">
+            <form class="form-wrapper">
+                    <div class="progress-bar-circle-wrapper">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="circle active">1</div>
+                        <div class="circle">2</div>
+                        <div class="circle">3</div>
+                        <div class="circle">4</div>
+                    </div>
+                    <!--Step wrapper  -->
+                    <div class="step-wrapper">
+                        <div class="step active" id="step1">
+                            <h2>Name</h2>
+                            <div class="field-group">
+                                <input type="text" name="firstname" id="frstname" value= ""  placeholder="Enter First Name" required >
+                                <input type="text" name="lastname" id="lastname" value= "" placeholder="Enter Last Name" required >
+                            </div>
+                        </div>
+                        
+                        <div class="step" id="step1">
+                            <h2>Cotact Details</h2>
+                            <div class="field-group">
+                                <input type="email" name="Email" id="email"  placeholder=" Enter Your Email">
+                                <input type="text" name="phone" id="phone" placeholder="Enter Phone Number" maxlength="11">
+                            </div>
+                        </div>
+
+                        <div class="step" id="step1">
+                            <h2>BirthDay</h2>
+                            <div class="field-group">
+                                <input type="text" name="name" id="name" placeholder="DD" maxlength="2" >
+                                <input type="text" name="name" id="name" placeholder="MM" maxlength="2" >
+                                <input type="text" name="name" id="name" placeholder="YYYY" maxlength="4">
+                            </div>
+                        </div>
+
+                        <div class="step" id="step1">
+                            <h2>Address</h2>
+                            <div class="field-group">
+                                <input type="text" name="name" id="name" placeholder="Enter City" >
+                                <input type="text" name="name" id="name" placeholder="Enter Address Line 1" >
+                                <input type="text" name="name" id="name" placeholder="Enter Address Line 2" >
+                                <select>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-btns-wrapper">
+                        <button class="btn"  id="prev" disabled>Prev</button>
+                        <button class="btn"  id="next">Next</button>
+                        <button class="btn"  id="submit" >Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+   </section>
+</body>
+<script src="./custom.js"></script>
+</html>

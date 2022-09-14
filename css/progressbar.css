@@ -1,0 +1,156 @@
+.progress-main-container{
+    padding: 80px 0;
+    text-align: center;
+}
+.progress-main-container .container{
+    max-width: 600px;
+    background-color: rgba(205, 205, 205, 0.177);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.188);
+}
+.progress-bar-circle-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.progress-bar-circle-wrapper .circle{
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    transition: 0.3s all;
+}
+.circle.active{
+    border: 2px solid #020248;
+}
+.progress-bar{
+    width: 0%;
+    background-color: #020248;
+    position: absolute;
+    height: 3px;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+    max-width: 100%;
+}
+
+.progress-bar-circle-wrapper::before{
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: #02024828;
+    z-index: -1;
+    left: 0;
+}
+
+.progress-btns-wrapper{
+    display: flex;
+    margin-top: 30px;
+    width: calc(100% + 20px);
+    margin: 30px -10px;
+    flex-wrap: wrap;
+}
+.progress-btns-wrapper .btn{
+    width: calc(50% - 20px);
+    margin: 0px 10px 10px;
+    border: 1px solid #020248;
+    padding:10px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #020248;
+    cursor: pointer;
+    font-family: 'Poppins';
+    letter-spacing: 0.5px;
+    transition: 0.3s all;
+    border-radius: 5px;
+}
+.progress-btns-wrapper .btn:hover{
+    background-color: #02024800;
+    color: #020248;
+}
+
+
+.progress-btns-wrapper .btn:focus{
+    outline: none;
+}
+.progress-btns-wrapper .btn:disabled{
+    cursor: not-allowed;
+    background-color: rgba(128, 128, 128, 0.171);
+    border: 1px solid gray;
+    color: gray;
+}
+
+/********** Step Form Wrapper **********/
+.step-wrapper{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 30px 20px;
+    background-color: white;
+    min-height: 200px;
+    margin: 40px 0;
+    border-radius: 10px;
+    align-items: flex-start;
+    border: 1px solid rgba(128, 128, 128, 0.188);
+    flex-direction: column;
+}
+
+.step{
+    display: none;
+}
+.step.active{
+    display: block;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.step h2{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family:  'Poppins', sans-serif;
+}
+.step .field-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.step .field-group input,select{
+    width: 100%;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom:20px;
+}
+
+input:focus, select:focus{
+    outline-color: rgba(128, 128, 128, 0.913);
+}
+input, select{
+     border:1px solid rgba(128, 128, 128, 0.693);
+}
+input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+#submit{
+    display: none;
+}
+
+
+.error{
+    background-color: #ff00003b;
+    width: 100%;
+    min-height: 30px;
+}
